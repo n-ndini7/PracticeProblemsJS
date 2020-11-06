@@ -1,28 +1,20 @@
-//PP2 
-let day = Math.floor(Math.random()*10)%7+1;
-console.log("Day generated:" +day);
-switch(day){
-    case 1:
-        console.log("Monday");
+//PP3
+const UNIT =1;
+const TEN =2;
+const HUNDRED =3;
+let num = Math.ceil(Math.random()*1000);
+console.log("Number is: "+num);
+let choice = Math.floor(Math.random()*10)%3+1;
+switch(choice){
+    case UNIT:
+        console.log("UNIT: ");
+        console.log(num%10);
         break;
-    case 2:
-        console.log("Tuesday");
+    case TEN:
+        console.log("TEN: ");
+        console.log(Math.floor(num/10)%10);
         break;
-    case 3:
-        console.log("Wednesday");
-        break;
-    case 4:
-        console.log("Thursday");
-        break;
-    case 5:
-        console.log("Friday");
-        break;
-    case 6:
-        console.log("Saturday");
-        break;
-    case 7:
-        console.log("Sunday");
-        break;
-    default:
-        console.log("Invalid day");
+    case HUNDRED:
+        console.log("HUNDRED: ");
+        console.log(Math.floor(num/100)%100);
 }
