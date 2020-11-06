@@ -1,18 +1,27 @@
-//PP3
-const HEAD = 0;
-const TAIL = 1;
-let headCount=0;
-let tailCount=0;
-while(headCount!=11&&tailCount!=11){
-let toss = Math.floor(Math.random()*10)%2;
+//PP4
+const LOSE = 0;
+const WIN = 1;
+let balance = 100;
+let winCount=0;
+let totalBets=0;
+
+while(balance>0&&balance<200){
+    let toss = Math.floor(Math.random()*10)%2;
     switch(toss){
-        case HEAD:
-            headCount++;
+        case LOSE:
+            balance--;
             break;
-        case TAIL:
-            tailCount++;
+        case WIN:
+            balance++;
+            winCount++;
             break;
     }
+    totalBets++;
 }
-console.log("Head Count : "+headCount);
-console.log("Tail Count : "+tailCount);
+console.log("Total bets = "+totalBets);
+console.log("Total wins = "+winCount);
+if(balance==0){
+    console.log("Final Balance "+balance+" INR. Better Luck next time! :(");
+}else{
+console.log("Congratulations you won "+balance+" INR !! :)");
+}
