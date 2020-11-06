@@ -1,37 +1,44 @@
 //PP1 - print a single digit number in words
 let num = Math.floor(Math.random()*10);
-switch(num){
-    case 0:
+if(num==0){
         console.log("Zero");
-        break;
-    case 1:
+}else if(num==1)
+{
         console.log("One");
-        break;
-    case 2:
+}
+else if(num==2)
+{
         console.log("Two");
-        break;
-    case 3:
+}
+else if(num==3)
+{
         console.log("Three");
-        break;
-    case 4:
+}
+else if(num==4)
+{
         console.log("Four");
-        break;
-    case 5:
+}
+else if(num==5)
+{
         console.log("Five");
-        break;
-    case 6:
+}
+else if(num==6)
+{
         console.log("Six");
-        break;
-    case 7:
+}
+else if(num==7)
+{
         console.log("Seven");
-        break;
-    case 8:
+}
+else if(num==8)
+{
         console.log("Eight");
-        break;
-    case 9:
+}
+else if(num==9)
+{
         console.log("Nine");
-        break;
-    default: 
+}    
+else 
+{
         console.log("Invalid");
-        break;
 }
