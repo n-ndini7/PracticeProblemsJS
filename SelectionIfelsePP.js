@@ -1,15 +1,7 @@
-//PP3 - check if the given year is leap year
-let year = Math.floor(Math.random()*10000);
-console.log("Year : "+ year);
-if(year%4==0){
-    if(year%100==0){
-        if(year%400==0)
-            console.log("Leap Year");
-        else
-            console.log("Not a leap year");
-    }
-    else 
-        console.log("Leap Year");
-}
+//PP4 - prints heads and tails accordingly on flipping a coin
+const HEAD = 0;
+let toss = Math.ceil(Math.random()*10)%2;
+if(toss==HEAD)
+    console.log("Heads");
 else 
-    console.log("Not a leap year");
+    console.log("Tails");
