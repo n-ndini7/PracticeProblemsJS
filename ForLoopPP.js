@@ -1,8 +1,8 @@
-//PP5
-let num = Math.ceil(Math.random()*10); 
-console.log("Number = "+num);
-let factorial=1;
+//PP6
+let num = Math.ceil(Math.random()*100);
+console.log("Number is: "+num);
+console.log("Factors are:");
 for(let i=1;i<=num;i++){
-    factorial = factorial*i;
+    if(num%i==0)
+        console.log(i);
 }
-console.log("Factorial: "+factorial);
