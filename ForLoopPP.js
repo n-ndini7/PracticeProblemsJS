@@ -1,18 +1,21 @@
-//PP3
-let num = Math.ceil(Math.random()*100); 
-console.log("Number is: "+num);
-if(num==1){
-    console.log("Not Prime");
-}
-else{
-    for(let i=2;i<=num;i++){
-        if(i==num){
-            console.log("Prime");
-            break;
-        }
-        if(num%i==0){
-            console.log("Not prime");
-            break;
-        }
+//PP4
+let start = Math.ceil(Math.random()*10); 
+let end = Math.ceil(Math.random()*100);
+console.log("Start Range: "+start);
+console.log("End Range: "+end);
+if(end>start){
+        console.log("Prime numbers are: ");
+        for(let i=start;i<=end;i++){
+            for(let j=2;j<=i;j++){
+                if(j==i){
+                    console.log(i);
+                }
+                if(i%j==0)
+                    break;   
+            }
     }
+}
+else 
+{
+    console.log("Invalid range!");
 }
