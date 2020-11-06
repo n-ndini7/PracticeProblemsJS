@@ -1,34 +1,22 @@
-//PP1 - print days in a week according to value generated
-let num = (Math.floor(Math.random()*10)%7)+1;
-if(num==1)
+//PP3 - print unit , tens or hundred\
+const UNIT =1;
+const TEN =2;
+const HUNDRED =3;
+let num = Math.ceil(Math.random()*1000);
+console.log("Number is: "+num);
+let choice = Math.floor(Math.random()*10)%3+1;
+if(choice==UNIT)
 {
-    console.log("Monday");
+        console.log("UNIT: ");
+        console.log(num%10);
 }
-else if(num==2)
+else if(choice==TEN)
 {
-    console.log("Tuesday");
+        console.log("TEN: ");
+        console.log(Math.floor(num/10)%10);
 }
-else if(num==3)
+else if(choice==HUNDRED)
 {
-    console.log("Wednesday");
-}
-else if(num==4)
-{
-    console.log("Thursday");
-}
-else if(num==5)
-{
-    console.log("Friday");
-}
-else if(num==6)
-{
-    console.log("Saturday");
-}
-else if(num==7)
-{
-    console.log("Sunday");
-}
-else 
-{
-    console.log("Invalid Day");
+        console.log("HUNDRED: ");
+        console.log(Math.floor(num/100)%100);
 }
