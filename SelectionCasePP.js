@@ -1,37 +1,28 @@
-//PP1 - write single digit number in words using switch case
-var num = Math.floor(Math.random()*10);
-console.log("Number generated: "+num);
-switch(num){
-    case 0:
-        console.log("Zero"); 
-        break;  
+//PP2 
+let day = Math.floor(Math.random()*10)%7+1;
+console.log("Day generated:" +day);
+switch(day){
     case 1:
-        console.log("One");
+        console.log("Monday");
         break;
     case 2:
-        console.log("Two");
+        console.log("Tuesday");
         break;
     case 3:
-        console.log("Three");
+        console.log("Wednesday");
         break;
     case 4:
-        console.log("Four");
+        console.log("Thursday");
         break;
     case 5:
-        console.log("Five");
+        console.log("Friday");
         break;
     case 6:
-        console.log("Six");
+        console.log("Saturday");
         break;
     case 7:
-        console.log("Seven");
-        break;
-    case 8:
-        console.log("Eight");
-        break;
-    case 9:
-        console.log("Nine");
+        console.log("Sunday");
         break;
     default:
-        console.log("Invalid");
+        console.log("Invalid day");
 }
