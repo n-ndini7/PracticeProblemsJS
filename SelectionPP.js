@@ -1,23 +1,44 @@
-//PP4 - print max and min based on operations
-let a = Math.floor(Math.random()*100);
-let b = Math.floor(Math.random()*100);
-let c = Math.floor(Math.random()*100);
-console.log("a: "+a);
-console.log("b: "+b);
-console.log("c: "+c);
-let op1 = a+b*c;
-console.log("a+b*c : "+op1);
-let op2 = a%b+c;
-console.log("a%b+c : "+op2);
-let op3 = c+a/b;
-console.log("c+a/b : "+op3);
-let op4 = a*b+c;
-console.log("a*b+c : "+op4);
-let max = op1;
-if(op2>max)
-    max = op2;
-if(op3>max)
-    max = op3;
-if(op4>max)
-    max = op4;
-console.log("Max: "+max);
+//PP1 - print a single digit number in words
+let num = Math.floor(Math.random()*10);
+if(num==0){
+        console.log("Zero");
+}else if(num==1)
+{
+        console.log("One");
+}
+else if(num==2)
+{
+        console.log("Two");
+}
+else if(num==3)
+{
+        console.log("Three");
+}
+else if(num==4)
+{
+        console.log("Four");
+}
+else if(num==5)
+{
+        console.log("Five");
+}
+else if(num==6)
+{
+        console.log("Six");
+}
+else if(num==7)
+{
+        console.log("Seven");
+}
+else if(num==8)
+{
+        console.log("Eight");
+}
+else if(num==9)
+{
+        console.log("Nine");
+}    
+else 
+{
+        console.log("Invalid");
+}
