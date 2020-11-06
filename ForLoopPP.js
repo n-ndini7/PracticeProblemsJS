@@ -1,8 +1,18 @@
-//PP2
-let num = Math.floor(Math.random()*10)+1; 
-console.log("Number generated : "+num);
-let harmonicNum = 0;
-for(let n=1;n<=num;n++){
-    harmonicNum = harmonicNum + 1/n;
+//PP3
+let num = Math.ceil(Math.random()*100); 
+console.log("Number is: "+num);
+if(num==1){
+    console.log("Not Prime");
 }
-console.log("Harmonic Num: "+harmonicNum);
+else{
+    for(let i=2;i<=num;i++){
+        if(i==num){
+            console.log("Prime");
+            break;
+        }
+        if(num%i==0){
+            console.log("Not prime");
+            break;
+        }
+    }
+}
