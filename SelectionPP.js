@@ -1,37 +1,34 @@
-//PP1 - print a single digit number in words
-let num = Math.floor(Math.random()*10);
-switch(num){
-    case 0:
-        console.log("Zero");
-        break;
-    case 1:
-        console.log("One");
-        break;
-    case 2:
-        console.log("Two");
-        break;
-    case 3:
-        console.log("Three");
-        break;
-    case 4:
-        console.log("Four");
-        break;
-    case 5:
-        console.log("Five");
-        break;
-    case 6:
-        console.log("Six");
-        break;
-    case 7:
-        console.log("Seven");
-        break;
-    case 8:
-        console.log("Eight");
-        break;
-    case 9:
-        console.log("Nine");
-        break;
-    default: 
-        console.log("Invalid");
-        break;
+//PP1 - print days in a week according to value generated
+let num = (Math.floor(Math.random()*10)%7)+1;
+if(num==1)
+{
+    console.log("Monday");
+}
+else if(num==2)
+{
+    console.log("Tuesday");
+}
+else if(num==3)
+{
+    console.log("Wednesday");
+}
+else if(num==4)
+{
+    console.log("Thursday");
+}
+else if(num==5)
+{
+    console.log("Friday");
+}
+else if(num==6)
+{
+    console.log("Saturday");
+}
+else if(num==7)
+{
+    console.log("Sunday");
+}
+else 
+{
+    console.log("Invalid Day");
 }
