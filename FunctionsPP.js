@@ -1,26 +1,32 @@
-//PP1
-const toFahrenheit =0;
-const toCelsius =1;
-function getConvertedTemperature(choice,temperature){
-    switch(choice){
-        case toFahrenheit:
-            console.log("You selected: Convert Celsius to Fahrenheit");
-            return (temperature*(9/5)) +32;
-        case toCelsius:
-            console.log("You selected: Convert Fahrenheit to Cahrenheit");
-            return ((temperature-32)*5/9);
+//PP2
+function palindromeCheck(num1,num2){
+    let palindromeNum1=0;
+    while(num1>0){
+        let rem = num1%10;
+        palindromeNum1 = palindromeNum1*10 +rem;
+        num1=Math.floor(num1/10);
     }
+    if(palindromeNum1 == num2)
+        return true;
+    else 
+        return false;
 }
 
-let choice = Math.floor(Math.random()*10)%2;
-let temp=0;
-if(choice==0){
-    temp = Math.floor(Math.random()*100); 
-    console.log("Selected Celsius Temp: "+temp+" C");
-}
-if(choice==1){
-    temp = Math.floor(Math.random()*180)+32;
-    console.log("Selected Fahrenheit Temp: "+temp+" F");
-}
-let convertedTemp = getConvertedTemperature(choice,temp);
-console.log("Converted temperature = "+convertedTemp);
+//custom values for check - palindrome
+let num1 = 143;
+let num2 = 341;
+let isPalindrome = palindromeCheck(num1,num2);
+console.log("Numbers: "+num1+", "+num2);
+console.log("Is number 2 a palindrome of number 1: "+isPalindrome);
+
+//custom values for check - not palindrome
+isPalindrome = palindromeCheck(19,11);
+console.log("Numbers: 11, 19");
+console.log("Is number 2 a palindrome of number 1: "+isPalindrome);
+
+//random generated values for check
+let a =Math.floor(Math.random()*100);
+let b =Math.floor(Math.random()*100);
+isPalindrome=palindromeCheck(a,b);
+console.log("Numbers: "+a+", "+b);
+console.log("Is number 2 a palindrome of number 1: "+isPalindrome);
