@@ -1,7 +1,8 @@
 //PP4 - read five random two digit values and then print the sum and average
-let value = Math.floor(Math.random()*100);
-console.log("Given value: "+value);
-let conversionType=Math.floor(Math.random()*10)%4+1;
+let value1 = 60;
+let value2 = 40;
+console.log("Given values : "+value1+"ft * "+value2+"ft");
+let value = value1*value2;
 let convertedValue=0;
-convertedValue = value/12;
-console.log("Inch to feet: "+convertedValue);
+convertedValue = value*0.3048;
+console.log("Area of Rectangular plot in meters:: "+convertedValue);
