@@ -1,10 +1,21 @@
-let numArray = new Array();
-for(let i=0;i<10;i++){
-    let num = Math.floor(Math.random()*900)+100;
-    numArray.push(num);
+function primeNumberChecker(num){
+    if(num!==1){
+        for(let i=2;i<=num;i++){
+            if(i==num){
+                return true;     
+            }
+            if(num%i==0){
+                return false;
+            }
+        }
+    }
 }
-console.log(numArray);
-let sortedArray = new Array();
-sortedArray = numArray.slice(0).sort();
-console.log("2nd Max ="+sortedArray[numArray.length-2]);
-console.log("2nd Min ="+sortedArray[1]);
+let primeFactorsArray = new Array();
+let num = Math.ceil(Math.random()*100);
+console.log("Num is: "+num);
+for(let i=1;i<=num/2;i++){
+    if(num%i==0&&primeNumberChecker(i)){
+        primeFactorsArray.push(i);
+    }
+}
+console.log(primeFactorsArray);
