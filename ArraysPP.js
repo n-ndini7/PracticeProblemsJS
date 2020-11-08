@@ -4,19 +4,7 @@ for(let i=0;i<10;i++){
     numArray.push(num);
 }
 console.log(numArray);
-let maxNum = 0;
-let minNum = 1000;
-let max2 = 0;
-let min2 = 1000;
-for(let element of numArray){ 
-    maxNum = Math.max(element,maxNum);
-    minNum = Math.min(element,minNum);
-}
-for(let element of numArray){
-    max2 = (element<maxNum&&element>max2)?element:max2;
-    min2 = (element>minNum&&element<min2)?element:min2;
-}
-console.log("Largest : "+maxNum);
-console.log("Second largest : "+max2);
-console.log("Smallest : "+minNum);
-console.log("Second smallest : "+min2);
+let sortedArray = new Array();
+sortedArray = numArray.slice(0).sort();
+console.log("2nd Max ="+sortedArray[numArray.length-2]);
+console.log("2nd Min ="+sortedArray[1]);
