@@ -1,12 +1,16 @@
-let numberArray = new Array();
-numberArray.push(5);
-numberArray.push(6);
-numberArray.push(-11);
-console.log(numberArray);
-let sum =0;
-function findSum(sum,num){
-    sum+=num;
-    return sum;
+let numArray = new Array();
+for(num=1;num<=100;num++){
+    if(num%10==(Math.floor(num/10)%10)&&num%10!=0)
+        numArray.push(num);
 }
-numberArray.reduce(findSum,0);
-console.log("Sum is "+sum);
+console.log(numArray);
+
+let numArray2=new Array();
+function isValidNumber(number){
+    return number%10==(Math.floor(number/10)%10)&&number%10!=0;
+}
+for(num=1;num<=100;num++){
+    numArray2.push(num);
+}
+let filteredArray = numArray2.filter(isValidNumber);
+console.log("Filtered array: "+filteredArray);
