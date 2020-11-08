@@ -1,21 +1,12 @@
-function primeNumberChecker(num){
-    if(num!==1){
-        for(let i=2;i<=num;i++){
-            if(i==num){
-                return true;     
-            }
-            if(num%i==0){
-                return false;
-            }
-        }
-    }
+let numberArray = new Array();
+numberArray.push(5);
+numberArray.push(6);
+numberArray.push(-11);
+console.log(numberArray);
+let sum =0;
+function findSum(sum,num){
+    sum+=num;
+    return sum;
 }
-let primeFactorsArray = new Array();
-let num = Math.ceil(Math.random()*100);
-console.log("Num is: "+num);
-for(let i=1;i<=num/2;i++){
-    if(num%i==0&&primeNumberChecker(i)){
-        primeFactorsArray.push(i);
-    }
-}
-console.log(primeFactorsArray);
+numberArray.reduce(findSum,0);
+console.log("Sum is "+sum);
